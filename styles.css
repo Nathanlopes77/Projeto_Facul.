@@ -1,0 +1,300 @@
+/* Reset básico */
+<style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #141414;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* cabeçalho */
+        header {
+            background-color: #000000;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        header .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header .logo {
+            width: 120px;
+        }
+
+        header nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        header nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* inicial */
+        .main-movie {
+            position: relative;
+            z-index: 1;
+            background-color: #141414;
+            color: #ffffff;
+            text-align: center;
+            padding: 150px 20px;
+        }
+
+        .main-movie .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .main-movie .movie-cover {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .main-movie .movie-cover img {
+            width: 100%;
+            height: auto;
+            opacity: 0.3;
+        }
+
+        .main-movie .title-movie {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .main-movie .description {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .main-movie .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .main-movie .button {
+            background-color: #e50914;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1rem;
+            color: #ffffff;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .main-movie .button i {
+            font-size: 1.2rem;
+        }
+
+        .main-movie .button:hover {
+            background-color: #f40612;
+        }
+
+        /* carrossel */
+        .carousel-movie {
+            padding: 50px 0;
+            background-color: #141414;
+        }
+
+        .carousel-movie .owl-carousel .item {
+            text-align: center;
+        }
+
+        .carousel-movie .box-movie {
+            width: 100%;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+
+        .carousel-movie .box-movie:hover {
+            transform: scale(1.05);
+        }
+
+        /* rodapé */
+        footer.baseboard {
+            background-color: #000;
+            color: #666;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        footer.baseboard p {
+            margin-bottom: 10px;
+        }
+
+        footer.baseboard a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer.baseboard a:hover {
+            color: #ffffff;
+        }
+    </style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #141414;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
+header {
+  background-color: #141414;
+  padding: 10px 0;
+  border-bottom: 1px solid #333;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .logo {
+  width: 120px;
+}
+
+header nav {
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do filme principal */
+.main-movie {
+  background: url('C:\Users\natha\OneDrive\Desktop\LNFLIX\assets\img\capa-house.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  text-align: center;
+  padding: 150px 20px;
+}
+
+.main-movie .container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main-movie .title-movie {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.main-movie .description {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.main-movie .buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.main-movie .button {
+  background-color: #e50914;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1rem;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background-color 0.3s;
+}
+
+.main-movie .button i {
+  font-size: 1.2rem;
+}
+
+.main-movie .button:hover {
+  background-color: #f40612;
+}
+
+/* Estilo do carrossel */
+.carousel-movie {
+  padding: 50px 0;
+  background-color: #141414;
+}
+
+.carousel-movie .owl-carousel .item {
+  text-align: center;
+}
+
+.carousel-movie .box-movie {
+  width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+
+.carousel-movie .box-movie:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo do rodapé */
+footer.baseboard {
+  background-color: #000;
+  color: #666;
+  padding: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer.baseboard p {
+  margin-bottom: 10px;
+}
+
+footer.baseboard a {
+  color: #666;
+  text-decoration: none;
+}
+
+footer.baseboard a:hover {
+  color: #ffffff;
+}
