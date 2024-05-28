@@ -1,5 +1,5 @@
 /* Reset básico */
-<style>
+
        
         * {
             margin: 0;
@@ -158,7 +158,6 @@
         footer.baseboard a:hover {
             color: #ffffff;
         }
-    </style>
 * {
   margin: 0;
   padding: 0;
@@ -209,7 +208,7 @@ header nav a:hover {
 
 /* Estilo do filme principal */
 .main-movie {
-  background: url('C:\Users\natha\OneDrive\Desktop\LNFLIX\assets\img\capa-house.jpg') no-repeat center center/cover;
+  background: url('assets/img/capa-house.jpg') no-repeat center center/cover;
   color: #ffffff;
   text-align: center;
   padding: 150px 20px;
@@ -297,4 +296,47 @@ footer.baseboard a {
 
 footer.baseboard a:hover {
   color: #ffffff;
+}
+
+
+
+.modal { 
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.modal-content {
+  position: relative;
+  margin: 15% auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 700px;
+  background-color: #141414;
+  border-radius: 5px;
+}
+
+.close { 
+  color: #aaa;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus{
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal video {
+  width: 100%;
+  border-radius: 5px;
 }

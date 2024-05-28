@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <style>
        
@@ -169,10 +170,9 @@
     <title>LNFLIX</title>
 </head>
 <body>
-   
     <header>
         <div class="container">
-            <img src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/logo.png" alt="Logo LNflix" class="logo">
+            <img src="assets/img/logo.png" alt="Logo LNflix" class="logo">
             <nav>
                 <a href="index.html">Início</a>
                 <a href="serie.html">Séries</a>
@@ -184,18 +184,18 @@
         <div class="main-movie">
             <div class="container">
                 <div class="movie-cover">
-                    <img src="C:\Users\natha\OneDrive\Desktop\LNFLIX\assets\img\avatar.jpg" alt="Capa do Filme">
+                    <img src="assets/img/avatar.jpg" alt="Capa do Filme">
                 </div>
                 <h3 class="title-movie">AVATAR</h3>
                 <p class="description">No exuberante mundo alienígena de Pandora vivem os Na'vi, seres que parecem ser primitivos, mas são altamente evoluídos.</p>
                 <div class="buttons">
-                    <button role="button" class="button">
+                    <button role="button" class="button trailer">
                         <i class="fas fa-play"></i>
-                        ASSISTIR AGORA
+                        TRAILER
                     </button>
-                    <button role="button" class="button">
+                    <button role="button" class="button rent">
                         <i class="fas fa-info-circle"></i>
-                        MAIS INFORMAÇÕES
+                        ALUGAR FILME
                     </button>
                 </div>
             </div>
@@ -204,35 +204,34 @@
     <div class="carousel-movie">
         <div class="owl-carousel owl-theme">
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini1.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini1.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini2.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini2.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini3.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini3.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini4.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini4.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini5.jpg" alt="">
-            </div>
-           
-            <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini6.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini5.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini7.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini6.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini8.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini7.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini9.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini8.jpg" alt="">
             </div>
             <div class="item">
-                <img class="box-movie" src="C:/Users/natha/OneDrive/Desktop/LNFLIX/assets/img/mini10.jpg" alt="">
+                <img class="box-movie" src="assets/img/mini9.jpg" alt="">
+            </div>
+            <div class="item">
+                <img class="box-movie" src="assets/img/mini10.jpg" alt="">
             </div>
         </div>
     </div>
@@ -241,6 +240,37 @@
         <p>Repositório <a target="_blank" href="https://github.com/nathan/trabalho-p2" rel="noopener noreferrer">GitHub</a> deste projeto</p><br>
         <p>Desenvolvido por <a target="_blank" href="https://nathan-portfolio.com" rel="noopener noreferrer"></a></p>
     </footer>
+
+    <!-- Modal Alugar -->
+    <div id="alugarModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Alugar Filme</h3>
+            <p id="alugarDetalhes"></p>
+            <button id="confirmar" class="button">Confirmar</button>
+        </div>
+    </div>
+
+    <!-- Modal Confirmação -->
+    <div id="sucesso" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Confirmação do Aluguel</h3>
+            <p>O filme foi alugado com sucesso!</p>
+        </div>
+    </div>
+
+    <!-- Modal Trailer -->
+    <div id="trailerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <video id="trailerVideo" controls>
+                <source src="assets/video/trailer.mp4" type="video/mp4">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
     <script>
@@ -254,6 +284,66 @@
                 autoplayTimeout: 3000,
                 autoplayHoverPause: true
             });
+
+            var trailerModal = document.getElementById("trailerModal");
+            var trailerBtn = document.querySelector(".button.trailer");
+            var closeButtons = document.querySelectorAll(".close");
+            var trailerVideo = document.getElementById("trailerVideo");
+
+            if (trailerBtn) {
+                trailerBtn.addEventListener('click', function() {
+                    trailerModal.style.display = "block";
+                    trailerVideo.play();
+                });
+            }
+
+            // Rent Modal
+            var alugarModal = document.getElementById("alugarModal");
+            var rentBtn = document.querySelector(".button.rent");
+            var alugarDetalhes = document.getElementById("alugarDetalhes");
+            var confirmarBtn = document.getElementById("confirmar");
+
+            if (rentBtn) {
+                rentBtn.addEventListener('click', function() {
+                    fetch('http://localhost:3000/api/filme')
+                        .then(response => response.json())
+                        .then(data => {
+                            const filme = data[0];
+                            alugarDetalhes.innerHTML = `Você está prestes a alugar <strong>${filme.titulo}</strong> por <strong>${filme.moeda} ${filme.preco}</strong> (${filme.tipo}).`;
+                            alugarModal.style.display = "block";
+                        })
+                        .catch(error => console.error('Error:', error));
+                });
+            }
+
+            if (confirmarBtn) {
+                confirmarBtn.addEventListener('click', function() {
+                    alugarModal.style.display = "none";
+                    document.getElementById("sucesso").style.display = "block";
+                });
+            }
+
+            closeButtons.forEach(button => {
+                button.onclick = function() {
+                    trailerModal.style.display = "none";
+                    alugarModal.style.display = "none";
+                    document.getElementById("sucesso").style.display = "none";
+                    trailerVideo.pause();
+                    trailerVideo.currentTime = 0;
+                };
+            });
+
+            window.onclick = function(event) {
+                if (event.target == trailerModal) {
+                    trailerModal.style.display = "none";
+                    trailerVideo.pause();
+                    trailerVideo.currentTime = 0;
+                } else if (event.target == alugarModal) {
+                    alugarModal.style.display = "none";
+                } else if (event.target == document.getElementById("sucesso")) {
+                    document.getElementById("sucesso").style.display = "none";
+                }
+            };
         });
     </script>
 </body>
