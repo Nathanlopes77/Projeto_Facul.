@@ -24,10 +24,10 @@ Este projeto consiste em uma plataforma de locação de vídeos online, inspirad
 # Tecnologias utilizadas🧑‍💻
 
 ## Back end
-- Node.js e Express.js para gerenciar as requisições HTTP, autenticação e lógica de negócios.
+- Node.js e Express.js para gerenciar as requisições HTTP.
   
  Recursos de Imagem
-- assets/img: Contém todas as imagens usadas no site, incluindo capas de filmes e séries, miniaturas e logos.
+- assets/img: Contém todas as imagens usadas no site, incluindo capas de filmes e séries.
 
 ## Front end
 HTML
